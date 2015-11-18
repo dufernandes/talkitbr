@@ -60,6 +60,7 @@
   <ItemGroup>
     <Compile Include="BankAccountSimple.cs" />
     <Compile Include="BankAccountLock.cs" />
+    <Compile Include="BankAccountMutex.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
