@@ -14,10 +14,7 @@ namespace MutexArticle
             {
                 if (args == null || args.Length == 0)
                 {
-                    Console.WriteLine("There must be an arument for executing this application:");
-                    Console.WriteLine("NoLocking - execute application with no concurrency treatment.");
-                    Console.WriteLine("WithLocking - execute application with lock construct. It implements the Monitor design pattern.");
-                    Console.WriteLine("WithMutex - execute application with Mutex class. It implements the Monitor design pattern.");
+                    PrintInstructions();
                 }
                 else if (args[0].Equals("NoLocking"))
                 {
@@ -51,6 +48,10 @@ namespace MutexArticle
                     threadAdd_50.Start();
                     threadWithdraw_110.Start();
                 }
+                else
+                {
+                    PrintInstructions();
+                }
             }
             catch (Exception ex)
             {
@@ -59,6 +60,14 @@ namespace MutexArticle
             }
 
             Console.ReadLine();
+        }
+
+        private static void PrintInstructions()
+        {
+            Console.WriteLine("There must be an arument for executing this application:");
+            Console.WriteLine("NoLocking - execute application with no concurrency treatment.");
+            Console.WriteLine("WithLocking - execute application with lock construct. It implements the Monitor design pattern.");
+            Console.WriteLine("WithMutex - execute application with Mutex class. It implements the Monitor design pattern.");
         }
     }
 }
